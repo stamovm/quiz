@@ -25,10 +25,15 @@ const Home = () => {
       <Container className="p-3">
         {qData.map((q) => (
           <Card key={q.id} style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="holder.js/100px180" />
+            {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
             <Card.Body>
               <Card.Title> {q.name}</Card.Title>
-              <Card.Text>Description text</Card.Text>
+              <Card.Text>Description: {q.description}</Card.Text>
+              <Card.Text>
+                <p>Author: {q.author}</p>
+                <p>Created on: {q.dateCreated}</p>
+                <p>Updated on: {q.dateUpdated}</p>
+              </Card.Text>
               <LinkContainer to={`/quiz${q.id}`}>
                 <Button variant="primary">Start quiz</Button>
               </LinkContainer>
