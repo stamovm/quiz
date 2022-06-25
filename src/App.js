@@ -8,7 +8,7 @@ import Nav from 'react-bootstrap/Nav'
 import Home from './components/Home'
 import Quiz from './components/Quiz'
 import About from './components/About'
-import DataProvider from './components/DataContext'
+import { DataProvider } from './components/DataContext'
 
 function App() {
   return (
