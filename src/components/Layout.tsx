@@ -32,13 +32,18 @@ const Layout = ({ children }: Props): React.ReactElement => {
       <div className="flex min-h-screen flex-col">
         <header>
           <nav className="flex h-10 items-center justify-between px-4 text-teal-700 shadow-md">
-            <Link href="/">
-              <a className=" text-lg font-bold">Quiz</a>
-            </Link>
+            <div className="">
+              <Link href="/">
+                <a className=" mr-2 text-lg font-bold">Home</a>
+              </Link>
+
+              {session ? (
+                <Link href="/new">
+                  <a className="text-lg">New</a>
+                </Link>
+              ) : null}
+            </div>
             <div>
-              {/* <Link href="/settings">
-              <a className="p-2">Settings</a>
-            </Link> */}
               <span> {session?.user?.name} </span>
               <a
                 className="ml-2 cursor-pointer font-semibold transition delay-300 duration-300 ease-in hover:text-teal-900 "
