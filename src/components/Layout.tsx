@@ -33,13 +33,13 @@ const Layout = ({ children }: Props): React.ReactElement => {
         <header>
           <nav className="flex h-10 items-center justify-between px-4 text-teal-700 shadow-md">
             <div className="">
-              <Link href="/">
-                <a className=" mr-2 text-lg font-bold">Home</a>
+              <Link href="/" className=" mr-2 text-lg font-bold">
+                Home
               </Link>
 
               {session ? (
-                <Link href="/new">
-                  <a className="text-lg">New</a>
+                <Link href="/new" className="text-lg">
+                  New
                 </Link>
               ) : null}
             </div>
